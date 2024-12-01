@@ -1,7 +1,12 @@
 from transformers import pipeline
 import gradio as gr
 
-model = pipeline("summarization")
+model = pipeline(
+    "summarization", 
+    model="google/t5-small", 
+    framework="pt", 
+    device=-1
+)
 
 def predict(prompt):
     return model(prompt)[0]["summary_text"]
