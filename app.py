@@ -3,6 +3,7 @@ import gradio as gr
 
 model = pipeline(
     "summarization", 
+    framework="tf",
     device=-1
 )
 
