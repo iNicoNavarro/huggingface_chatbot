@@ -3,8 +3,8 @@ import gradio as gr
 
 model = pipeline(
     "summarization", 
-    framework="tf",
-    device=-1
+    device=-1,
+    use_auth_token=True
 )
 
 def predict(prompt):
